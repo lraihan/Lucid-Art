@@ -14,12 +14,18 @@ class LandingScreen extends StatelessWidget {
       body: Container(
         width: screenWidth(context),
         height: screenHeight(context),
-        padding: EdgeInsets.symmetric(vertical: verticalPadding(context), horizontal: screenWidth(context) * .21),
+        padding: EdgeInsets.symmetric(
+          vertical: verticalPadding(context),
+          horizontal: orientation(context) == Orientation.portrait
+              ? horizontalPadding(context)
+              : horizontalPadding(context) * 21,
+        ),
         child: Center(
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment:
+                  orientation(context) == Orientation.portrait ? CrossAxisAlignment.center : CrossAxisAlignment.start,
               children: [
                 if (orientation(context) == Orientation.portrait) ...[
                   Container(

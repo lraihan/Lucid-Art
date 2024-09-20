@@ -21,12 +21,18 @@ dependencies:
   toggle_switch: ^2.3.0
   stacked_card_carousel: ^0.0.4
   carousel_slider: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_lints: ^4.0.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon.png"
 
 flutter:
   assets: 
